@@ -1,5 +1,6 @@
-- name: play-book
+- name: Play-01
   hosts: web
   tasks:
-  - name: print a message
+  - name: Play-01 Task-01
     ansible.builtin.debug:
+    msg: this is from Play-01 Task-01
