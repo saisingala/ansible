@@ -5,16 +5,25 @@
 #     ansible.builtin.ping:
 
 
+# - name: variable to be print
+#   hosts: web
+#   vars:
+#     COURSE: DevOps
+#   tasks:
+#     - name: print the course information
+#       ansible.builtin.debug:
+#         msg: "I am learning {{COURSE}}"
+#     - name: print the course ingo again 
+#       vars:
+#         COURSE: ansible
+#       ansible.builtin.debug:
+#         msg: "I am learning {{COURSE}}"
+
 - name: variable to be print
-  hosts: web
+  hosts: web     
   vars:
-    COURSE: DevOps
+  - vars.yaml
   tasks:
-    - name: print the course information
-      ansible.builtin.debug:
-        msg: "I am learning {{COURSE}}"
-    - name: print the course ingo again 
-      vars:
-        COURSE: ansible
-      ansible.builtin.debug:
-        msg: "I am learning {{COURSE}}"
+  - name: print the course information
+    ansible.builtin.debug:
+      msg: "I am learning {{COURSE}}"
