@@ -1,7 +1,7 @@
 - name: Print the course information
   hosts: web
   vars:
-    vars.yaml
+  - vars.yaml
   tasks:
   - name: print the information
     ansible.builtin.debug:
