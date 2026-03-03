@@ -15,7 +15,7 @@
   #   prompt: please enter trainer name
   #   private: false  
   var_files:
-  - vars.yam
+  - vars.yaml
   tasks:
   - name: print the course information
     ansible.builtin.debug:
