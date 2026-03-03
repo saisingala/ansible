@@ -39,9 +39,9 @@
     ansible.builtin.debug:
       msg: "I am learning {{COURSE}}"
 
-- name: variable to be print
-  hosts: web     
-  tasks:
-  - name: print the course information
-    ansible.builtin.debug:
-      msg: "I am learning {{COURSE}}"
+# - name: variable to be print
+#   hosts: web     
+#   tasks:
+#   - name: print the course information
+#     ansible.builtin.debug:
+#       msg: "I am learning {{COURSE}}"
