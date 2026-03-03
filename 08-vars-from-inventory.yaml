@@ -1,4 +1,4 @@
-- name: print the varaible from inventory var_files
+- name: print the varaible from inventory files
   hosts: web
   tasks:
   - name: print the course information
