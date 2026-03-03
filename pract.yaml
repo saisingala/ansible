@@ -13,3 +13,8 @@
     - name: print the course information
       ansible.builtin.debug:
         msg: "I am learning {{COURSE}}"
+    - name: print the course ingo again 
+      vars:
+        course: ansible
+      ansible.builtin.debug:
+        msg: "I am learning {{COURSE}}"
