@@ -1,0 +1,5 @@
+- name: play-book
+  hosts: web
+  tasks:
+  - name: print a message
+    ansible.builtin.debug:
