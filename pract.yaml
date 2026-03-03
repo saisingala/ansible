@@ -1,6 +1,15 @@
-- name: ping the server
+# - name: ping the server
+#   hosts: web
+#   tasks:
+#   - name: ping information
+#     ansible.builtin.ping:
+
+
+- name: variable to be print
   hosts: web
+  vars:
+    COURSE: DevOps
   tasks:
-  - name: ping information
-    ansible.builtin.ping:
-    
+    - name: print the course information
+      ansible.builtin.debug:
+        msg: "I am learning {{COURSE}}"
