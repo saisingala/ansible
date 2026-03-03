@@ -2,11 +2,11 @@
   hosts: web
   vars_propmt:
   - name: COURSE
-    Please enter course name:
+    prompt: Please enter course name
   - name: DURATION
-    please enter duration:
+    prompt: please enter duration
   - name: TRAINER
-    please enter trainer name:
+    prompt: please enter trainer name
   tasks:
   - name: Print the course information
     ansible.builtin.debug:
