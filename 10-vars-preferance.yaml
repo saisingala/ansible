@@ -1,0 +1,28 @@
+- name: print the varaible from inventory files
+  hosts: web
+  vars:
+    COURSE: "Devops with AWS play level"
+    DURATION: "130HRS"
+    TRAINER: Sivakumar
+  vars_prompt:
+  - name: COURSE
+    prompt: Please enter course name
+    private: false #not confindential
+  - name: DURATION
+    prompt: please enter duration
+    private: false
+  - name: TRAINER
+    prompt: please enter trainer name
+    private: false  
+  tasks:
+  - name: print the course information
+    ansible.builtin.debug:
+      msg: "Hi all, i am learning {{COURSE}}, Duration is {{DURATION}} and the Trainer={{TRAINER}}"
+
+  - name: print the course information
+    vars:
+      COURSE: "Devops with AWS task level"
+      DURATION: "160HRS"
+      TRAINER: Sivakumar
+    ansible.builtin.debug:
+      msg: "Hi all, i am learning {{COURSE}}, Duration is {{DURATION}} and the Trainer={{TRAINER}}"    
