@@ -1,6 +1,6 @@
 - name: Variable to be print in prompt
   hosts: web
-  vars_propmt:
+  vars_prompt:
   - name: COURSE
     prompt: Please enter course name
   - name: DURATION
