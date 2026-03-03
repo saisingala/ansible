@@ -2,7 +2,7 @@
   hosts: web
   vars:
     COURSE: "DevOps with AWS"
-    DURTAION: "120HRS"
+    DURATAION: "120HRS"
     TRAINER: "Sivakumar Reddy"
   tasks:
   - name: print the information
