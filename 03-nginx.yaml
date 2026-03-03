@@ -1,8 +1,9 @@
 #insatlling nginx
 - name: nginx install and run
   hosts: web
+  become: yes #take sudo access
   tasks:
   - name: install nginx
-    ansible.builtin.package:
+    ansible.builtin.package: #HETEROGENOUS MODULE IT WORKS FOR ALL DISTRIBUTIONS
       name: nginx
       state: present
