@@ -42,11 +42,11 @@
     ansible.builtin.debug:
       msg: "{{ num | list2dict }}"  
 
-  - name: 
+  - name: map to list
     vars:
       course:
-        name: DevOps with AWS
+        name: "DevOps with AWS"
         duration: 120
-        trainer: Sivakumar
+        trainer: "Sivakumar"
     ansible.builtin.debug:
       msg: "{{ course | dict2items }}"          
