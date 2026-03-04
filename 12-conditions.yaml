@@ -1,16 +1,33 @@
+# - name: print the conditional satements
+#   hosts: local
+#   connection: local
+#   vars_prompt:
+#     - name: num
+#       prompt: print the Number
+#       private: false 
+#   tasks:
+#   - name: print the number if less than 10
+#     ansible.builtin.debug:
+#      msg: "{{ num }} is less than 10"
+#     when: num | int < 10 #conditional expresseion
+#   - name: print the number if greater than or equals to 10
+#     ansible.builtin.debug:
+#      msg: "{{ num }} is greater than or equals to 10"
+#     when: num | int >= 10
+
+
+
 - name: print the conditional satements
   hosts: local
   connection: local
-  vars_prompt:
-    - name: num
-      prompt: print the Number
-      private: false 
+  vars:
+    num: 129
   tasks:
   - name: print the number if less than 10
     ansible.builtin.debug:
      msg: "{{ num }} is less than 10"
-    when: num | int < 10
-  - name: print the number if greater than 10
+    when: num < 10 #conditional expresseion
+  - name: print the number if greater than or equals to 10
     ansible.builtin.debug:
      msg: "{{ num }} is greater than or equals to 10"
-    when: num | int >= 10
+    when: num >= 10
