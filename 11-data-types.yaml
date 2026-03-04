@@ -3,7 +3,7 @@
   vars:
     course: Devops with AWS #STRING
     duration: 120 #NUMBER
-    tariner: Sivakumar Reddy
+    trainer: Sivakumar Reddy
     topics: #LIST
     - Linux
     - ansible
