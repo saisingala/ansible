@@ -16,6 +16,9 @@
       ci: Jenkins
       cd: ansible
       cloud: AWS
+      AWS:
+      - IAM
+      - S3
   tasks:
   - name: print the course information
     ansible.builtin.debug:
