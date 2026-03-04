@@ -35,14 +35,9 @@
       num: [ 23, 25, 45 ]
     ansible.builtin.debug:
       msg: "{{ num | min }}" 
+  
 
-  - name: list to map
-    vars:
-      num: [ 23, 25, 45 ]
-    ansible.builtin.debug:
-      msg: "{{ num | list2dict }}"  
-
-  - name: map to list
+  - name: convert map to list
     vars:
       course:
         name: "DevOps with AWS"
