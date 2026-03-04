@@ -1,0 +1,22 @@
+- name: ansible course information
+  hosts: local
+  vars:
+    course: Devops with AWS #STRING
+    duration: 120 #NUMBER
+    tariner: Sivakumar Reddy
+    topics: #LIST
+    - Linux
+    - ansible
+    - Terraform
+    - Docker
+    - CLoud
+    - K8
+    live: true #Boolean
+    tools: #map/dictionery
+      ci: Jenkins
+      cd: ansible
+      cloud: AWS
+  tasks:
+  - name: print the course information
+    ansible.builtin.debug:
+      msg: "Hi I am learning {{ course }}, with duration of  {{ duration }} and the trainer is {{ trainer }} the topics are {{ topics }} with live {{ live }} and tools are {{ tools }}"
