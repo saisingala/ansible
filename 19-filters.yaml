@@ -2,6 +2,6 @@
   hosts: local
   connection: local
   tasks:
-  - nmae: print the default value
+  - name: print the default value
     ansible.builtin.debug:
       msg: " {{ course | default ('ansible') }}"
