@@ -16,5 +16,5 @@
   - name: print user information
     ansible.builtin.debug:
       msg: " User info {{ USER }} "
-    when: rc != 1
+    when: rc != 0
 
