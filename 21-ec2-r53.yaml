@@ -20,3 +20,15 @@
   - name: print the output
     ansible.builtin.debug:
       msg: "{{ ec2_instance }}"
+
+  - name: print r53 records
+    amazon.aws.route53:
+      state: present
+      zone: khaleja.fun
+      record: "{{ item.item }}.{{ zone }}" #mysql.khaleja.fun
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].private_ip_address }}"
+      wait: true
+      overwrite: true
+    loop: "{{ ec2_instance.results }}"
