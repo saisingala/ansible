@@ -16,3 +16,7 @@
       image_id: ami-0220d79f3f480ecf5
     loop: "{{ instance }}"
     register: ec2_instance
+
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "{{ ec2_instance }}"
