@@ -6,6 +6,7 @@
     - mysql
     - backend
     - frontend
+  zone: khaleja.fun
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
@@ -24,7 +25,7 @@
   - name: print r53 records
     amazon.aws.route53:
       state: present
-      zone: khaleja.fun
+      zone: "{{ zone }}"
       record: "{{ item.item }}.{{ zone }}" #mysql.khaleja.fun
       type: A
       ttl: 1
