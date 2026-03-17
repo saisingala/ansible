@@ -1,7 +1,15 @@
-- name: gather facts
-  hosts: web
-  become: yes
+# - name: gather facts
+#   hosts: web
+#   become: yes
+#   tasks:
+#   - name: gathering facts
+#     ansible.builtin.debug:
+#       msg: " facts are {{ ansible_facts }}"
+
+
+- hosts: all
+  gather_facts: yes
   tasks:
-  - name: gathering facts
-    ansible.builtin.debug:
-      msg: " facts are {{ ansible_facts }}"
+    - name: Show OS
+      ansible.builtin.debug:
+        msg: "{{ ansible_facts['os_family'] }}"
