@@ -4,3 +4,6 @@
   - name: print the course information
     ansible.builtin.debug:
       msg: "Hi {{NAME}}, GOOD {{GREETING}}"
+
+
+# ansible-playbook -i inventory.ini -e "NAME=Sai GREETING=Morning"  09-vars-from-args.yaml
