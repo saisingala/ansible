@@ -1,5 +1,5 @@
 - name: print loops
-  hosts: mysql
+  hosts: servers
   #connection: local
   become: yes
   tasks: 
