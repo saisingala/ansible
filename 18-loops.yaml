@@ -1,6 +1,6 @@
 - name: print loops
-  hosts: local
-  connection: local
+  hosts: servers
+  #connection: local
   become: yes
   tasks: 
   - name: install package
